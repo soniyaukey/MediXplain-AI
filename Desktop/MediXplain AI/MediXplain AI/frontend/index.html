@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediXplain AI - Explainable Disease Risk Prediction</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 5px;
+            display: none;
+        }
+        .high-risk {
+            background-color: #e74c3c;
+            color: white;
+        }
+        .medium-risk {
+            background-color: #f39c12;
+            color: white;
+        }
+        .low-risk {
+            background-color: #27ae60;
+            color: white;
+        }
+        .chart-container {
+            margin-top: 20px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MediXplain AI</h1>
+        <h2>Diabetes Risk Prediction</h2>
+
+        <form id="predictionForm">
+            <div class="form-group">
+                <label for="pregnancies">Number of Pregnancies:</label>
+                <input type="number" id="pregnancies" name="pregnancies" required min="0">
+            </div>
+
+            <div class="form-group">
+                <label for="glucose">Glucose Level (mg/dL):</label>
+                <input type="number" id="glucose" name="glucose" required min="0">
+            </div>
+
+            <div class="form-group">
+                <label for="blood_pressure">Blood Pressure (mm Hg):</label>
+                <input type="number" id="blood_pressure" name="blood_pressure" required min="0">
+            </div>
+
+            <div class="form-group">
+                <label for="skin_thickness">Skin Thickness (mm):</label>
+                <input type="number" id="skin_thickness" name="skin_thickness" required min="0">
+            </div>
+
+            <div class="form-group">
+                <label for="insulin">Insulin Level (mu U/ml):</label>
+                <input type="number" id="insulin" name="insulin" required min="0">
+            </div>
+
+            <div class="form-group">
+                <label for="bmi">BMI:</label>
+                <input type="number" id="bmi" name="bmi" step="0.1" required min="0">
+            </div>
+
+            <div class="form-group">
+                <label for="diabetes_pedigree">Diabetes Pedigree Function:</label>
+                <input type="number" id="diabetes_pedigree" name="diabetes_pedigree" step="0.01" required min="0">
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required min="0">
+            </div>
+
+            <button type="submit">Predict Risk</button>
+        </form>
+
+        <div id="result" class="result">
+            <h3>Risk Assessment</h3>
+            <p id="riskLevel"></p>
+            <p id="explanation"></p>
+            <div class="chart-container">
+                <canvas id="featureChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
