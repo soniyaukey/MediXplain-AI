@@ -105,3 +105,4 @@ MIT
 
 **Built with ❤️ for explainable healthcare AI!**
 ![image alt](https://github.com/soniyaukey/MediXplain-AI/blob/852c718bdfff0eaae1118caf8bcfc3e62f9f904f/Screenshot%202026-04-08%20225707.png)
+![image alt](https://github.com/soniyaukey/MediXplain-AI/blob/b61ca13e0d4dcfd068e3c1f64d91c1e83f6b171c/Screenshot%202026-04-08%20225721.png)
