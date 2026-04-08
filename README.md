@@ -104,5 +104,4 @@ Age: 50
 MIT
 
 **Built with ❤️ for explainable healthcare AI!**
-
-https://github.com/soniyaukey/MediXplain-AI/blob/main/Screenshot%202026-04-08%20225707.png?raw=true
+![image alt](https://github.com/soniyaukey/MediXplain-AI/blob/852c718bdfff0eaae1118caf8bcfc3e62f9f904f/Screenshot%202026-04-08%20225707.png)
